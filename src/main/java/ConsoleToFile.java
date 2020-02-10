@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class ConsoleToFile {
 
+//  Dedicated method for writing content to the end of a file:
     public static void writeToFile(String userInput) {
         String destinationFile = "./src/main/resources/console2file.txt";
         try {
@@ -13,11 +14,10 @@ public class ConsoleToFile {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
+//  Main method containing UI:
     public static void main(String[] args) {
-
         Scanner keyboardScanner = new Scanner(System.in);
         System.out.println("Enter text:");
         String userInput = keyboardScanner.nextLine();
@@ -26,7 +26,5 @@ public class ConsoleToFile {
             System.out.println("Enter text:");
             userInput = keyboardScanner.nextLine();
         }
-
     }
-
 }
